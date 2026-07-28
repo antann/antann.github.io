@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD2PDF e TEX2PDF — dalla sorgente alla pagina</title>
+<meta name="description" content="Due strumenti open source che trasformano Markdown e LaTeX in PDF impaginati, con template già pronti. Girano in locale.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD2PDF e TEX2PDF — dalla sorgente alla pagina">
+<meta property="og:description" content="Due strumenti open source che trasformano Markdown e LaTeX in PDF impaginati, con template già pronti.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="salta" href="#progetti">Salta al contenuto</a>
+
+<header class="testata">
+  <div class="testata__interno">
+    <span class="marchio">antann<span class="marchio__barra">/</span>progetti</span>
+    <nav class="menu" aria-label="Sezioni">
+      <a href="#md2pdf">MD2PDF</a>
+      <a href="#tex2pdf">TEX2PDF</a>
+      <!-- MODIFICA QUI: profilo GitHub -->
+      <a href="https://github.com/antann" class="menu__esterno">GitHub&#8239;<span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ APERTURA: sorgente | pagina ============ -->
+  <section class="lastra lastra--apertura">
+    <div class="colonne">
+
+      <div class="colonna colonna--sorgente">
+        <p class="etichetta">sorgente</p>
+<pre class="codice" aria-hidden="true"><span class="cod-meta">---</span>
+<span class="cod-chiave">titolo:</span> Dalla sorgente alla pagina
+<span class="cod-chiave">autore:</span> antann
+<span class="cod-chiave">template:</span> tecnico
+<span class="cod-meta">---</span>
+
+<span class="cod-segno"># </span>Dalla sorgente alla pagina
+
+Due strumenti che trasformano
+testo marcato in <span class="cod-segno">**</span>PDF impaginati<span class="cod-segno">**</span>,
+con template già pronti.<span class="cursore"></span></pre>
+      </div>
+
+      <div class="colonna colonna--pagina">
+        <p class="etichetta">pagina</p>
+        <h1 class="titolone reso" style="--i:1">Dalla sorgente alla pagina</h1>
+        <p class="occhiello reso" style="--i:2">Due strumenti che trasformano testo marcato in PDF impaginati, con template già pronti. Girano sul tuo computer: nessun account, nessun caricamento di file.</p>
+        <p class="dati reso" style="--i:3">codice aperto · Windows, macOS, Linux · 4 template inclusi</p>
+        <p class="azioni reso" style="--i:4">
+          <a class="bottone" href="#md2pdf">Guarda MD2PDF</a>
+          <a class="bottone bottone--vuoto" href="#tex2pdf">Guarda TEX2PDF</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="progetti"></div>
+
+  <!-- ============ MD2PDF ============ -->
+  <section class="lastra" id="md2pdf">
+    <div class="colonne">
+
+      <div class="colonna colonna--sorgente">
+        <p class="etichetta">formato in ingresso</p>
+        <p class="estensione">.md</p>
+<pre class="codice codice--breve" aria-hidden="true"><span class="cod-segno">## </span>Capitolo secondo
+
+Testo normale, <span class="cod-segno">*</span>corsivo<span class="cod-segno">*</span>,
+<span class="cod-segno">`</span>codice inline<span class="cod-segno">`</span>.
+
+<span class="cod-segno">- </span>primo punto
+<span class="cod-segno">- </span>secondo punto
+
+<span class="cod-segno">| </span>voce <span class="cod-segno">|</span> importo <span class="cod-segno">|</span></pre>
+      </div>
+
+      <div class="colonna colonna--pagina">
+        <p class="etichetta">Markdown &rarr; PDF</p>
+        <h2 class="titolo">MD2PDF</h2>
+        <p class="testo">Apri un file Markdown, scegli un template, ottieni il PDF. L'anteprima si aggiorna mentre scrivi, così l'impaginazione la vedi prima di generare il documento.</p>
+        <ul class="elenco">
+          <li>Quattro template pronti, si cambia con un clic</li>
+          <li>Anteprima dal vivo del documento impaginato</li>
+          <li>Applicazione desktop: il PDF lo salvi dove vuoi, senza passare dal browser</li>
+          <li>Installatore per Windows</li>
+        </ul>
+        <p class="stack">React · Vite · Electron</p>
+        <p class="azioni">
+          <!-- MODIFICA QUI: indirizzo del repository MD2PDF -->
+          <a class="bottone" href="https://github.com/antann/MD2PDF">Codice su GitHub&#8239;<span aria-hidden="true">&#8599;</span></a>
+          <!-- MODIFICA QUI: pagina delle release -->
+          <a class="bottone bottone--vuoto" href="https://github.com/antann/MD2PDF/releases">Scarica&#8239;<span aria-hidden="true">&#8599;</span></a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TEX2PDF ============ -->
+  <section class="lastra" id="tex2pdf">
+    <div class="colonne">
+
+      <div class="colonna colonna--sorgente">
+        <p class="etichetta">formato in ingresso</p>
+        <p class="estensione">.tex</p>
+<pre class="codice codice--breve" aria-hidden="true"><span class="cod-segno">\section</span>{Capitolo secondo}
+
+Testo normale, <span class="cod-segno">\emph</span>{corsivo},
+formule come $E = mc^2$.
+
+<span class="cod-segno">\begin</span>{itemize}
+  <span class="cod-segno">\item</span> primo punto
+  <span class="cod-segno">\item</span> secondo punto
+<span class="cod-segno">\end</span>{itemize}</pre>
+      </div>
+
+      <div class="colonna colonna--pagina">
+        <p class="etichetta">LaTeX &rarr; PDF</p>
+        <h2 class="titolo">TEX2PDF</h2>
+        <p class="testo">Incolla il corpo del documento oppure un <code>.tex</code> completo: TEX2PDF riconosce da solo quale dei due gli hai dato e compila. Il motore Tectonic è incluso, quindi non serve installare una distribuzione TeX.</p>
+        <ul class="elenco">
+          <li>Editor con evidenziazione della sintassi</li>
+          <li>Anteprima del PDF dentro la pagina</li>
+          <li>Gli stessi quattro template di MD2PDF</li>
+          <li>Motore Tectonic incluso: si prepara al primo avvio</li>
+        </ul>
+        <p class="stack">React · Vite · Node · Tectonic</p>
+        <p class="azioni">
+          <!-- MODIFICA QUI: indirizzo del repository TEX2PDF -->
+          <a class="bottone" href="https://github.com/antann/TEX2PDF">Codice su GitHub&#8239;<span aria-hidden="true">&#8599;</span></a>
+          <!-- MODIFICA QUI: pagina delle release -->
+          <a class="bottone bottone--vuoto" href="https://github.com/antann/TEX2PDF/releases">Scarica&#8239;<span aria-hidden="true">&#8599;</span></a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TEMPLATE ============ -->
+  <section class="lastra lastra--template" id="template">
+    <p class="etichetta">gli stessi in tutti e due gli strumenti</p>
+    <h2 class="titolo titolo--centro">Quattro template</h2>
+
+    <ul class="griglia-template">
+      <li class="scheda">
+        <div class="mini mini--tecnico" aria-hidden="true">
+          <span class="riga riga--titolo"></span>
+          <span class="riga"></span><span class="riga riga--corta"></span>
+          <span class="blocco"></span>
+          <span class="riga"></span><span class="riga riga--media"></span>
+        </div>
+        <h3>tecnico</h3>
+        <p>Documentazione e specifiche: titoli numerati, blocchi di codice, tabelle.</p>
+      </li>
+      <li class="scheda">
+        <div class="mini mini--relazione" aria-hidden="true">
+          <span class="riga riga--titolo"></span>
+          <span class="riga riga--media"></span>
+          <span class="riga"></span><span class="riga"></span>
+          <span class="riga"></span><span class="riga riga--corta"></span>
+        </div>
+        <h3>relazione</h3>
+        <p>Testo continuo per relazioni e rapporti: frontespizio, indice, note.</p>
+      </li>
+      <li class="scheda">
+        <div class="mini mini--manuale" aria-hidden="true">
+          <span class="riga riga--titolo"></span>
+          <span class="passo"><span class="pallino"></span><span class="riga riga--media"></span></span>
+          <span class="passo"><span class="pallino"></span><span class="riga riga--corta"></span></span>
+          <span class="passo"><span class="pallino"></span><span class="riga riga--media"></span></span>
+        </div>
+        <h3>manuale</h3>
+        <p>Istruzioni passo passo: paragrafi brevi e numerazione delle procedure.</p>
+      </li>
+      <li class="scheda">
+        <div class="mini mini--appunti" aria-hidden="true">
+          <span class="riga riga--corta"></span>
+          <span class="riga"></span><span class="riga riga--media"></span>
+          <span class="riga"></span><span class="riga riga--corta"></span>
+          <span class="riga riga--media"></span>
+        </div>
+        <h3>appunti</h3>
+        <p>Impaginazione leggera per appunti e bozze: margini larghi, elenchi.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ COME SI USA ============ -->
+  <section class="lastra">
+    <div class="colonne">
+      <div class="colonna colonna--sorgente">
+        <p class="etichetta">tre passaggi</p>
+<pre class="codice codice--breve" aria-hidden="true">git clone &lt;repository&gt;
+npm install
+npm run dev</pre>
+      </div>
+      <div class="colonna colonna--pagina">
+        <p class="etichetta">come si parte</p>
+        <h2 class="titolo">Si scarica e si apre</h2>
+        <p class="testo">Nessun servizio da attivare e nessun file che esce dal tuo computer: i due progetti si installano in locale e lavorano solo lì. Le istruzioni complete, con gli script di avvio per Windows, stanno nel README di ciascun repository.</p>
+        <p class="azioni">
+          <!-- MODIFICA QUI: profilo GitHub -->
+          <a class="bottone" href="https://github.com/antann">Tutti i progetti&#8239;<span aria-hidden="true">&#8599;</span></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pieno">
+  <p>Progetti personali a codice aperto.</p>
+  <p><!-- MODIFICA QUI: profilo GitHub --><a href="https://github.com/antann">github.com/antann</a></p>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
