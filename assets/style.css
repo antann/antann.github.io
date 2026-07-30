@@ -72,10 +72,32 @@ a { color: inherit; }
 }
 
 .marchio {
+  position: relative;
+  display: inline-block;
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.02em;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--filo);
 }
+/* il filo blu scorre da sinistra sopra la sottolineatura di riposo */
+.marchio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--matita);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.marchio:hover::after,
+.marchio:focus-visible::after { transform: scaleX(1); }
+
 .marchio__barra { color: var(--matita); padding: 0 1px; }
 
 .menu {
@@ -406,5 +428,6 @@ body.composta .reso {
   html { scroll-behavior: auto; }
   .reso { opacity: 1; transform: none; }
   body.composta .reso { transition: none; }
+  .marchio::after { transition: none; }
   .cursore { animation: none; }
 }
